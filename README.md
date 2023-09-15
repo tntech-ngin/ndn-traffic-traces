@@ -3,8 +3,8 @@ This repository contains captured trace files of NDN traffic from wide-area [NDN
 As of this date, the repository contains traces from 4 NDN testbed routers, namely, `Washington University in St. Louis (WUSTL)`, `The University of Arizona`,
 `University of Memphis`, and `University of California, Los Angeles (UCLA)` everyday from `2023-04-19` to `2023-06-09` for a duration of 3 hours each day.
 
-Initially, the capture was started with just 2 routers, `WUSTL` and `UCLA` until `2023-05-26`. Then, the capture was extended to include `The University of Arizona`
-and `University of Memphis`. The capture was done with [service units](https://github.com/tntech-ngin/ndn-traffic-capture-scripts) deployed on the routers. These service units make use of [NDN traffic
+Initially, the capture was started with just 2 routers, `WUSTL` and `UCLA` until `2023-05-26`. Then, it was extended to include `The University of Arizona`
+and `University of Memphis`. The capture is performed with [unit configuration files](https://github.com/tntech-ngin/ndn-traffic-capture-scripts) deployed on the routers. These unit files make use of [NDN traffic
 dumper](https://github.com/usnistgov/ndntdump) based docker container to capture the NDN traffic.
 
 ## Trace File Naming Convention
