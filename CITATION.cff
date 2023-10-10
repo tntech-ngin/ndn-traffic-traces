@@ -1,29 +1,17 @@
-cff-version: 0.0.1
-title: 2023-tntech-nist-ndn-traffic-repo
-message: >-
-  If you use this software, please cite it using the
-  metadata from this file.
-type: dataset
-authors:
-  - given-names: Sankalpa
-    family-names: Timilsina
-    email: stimilsin43@tntech.edu
-    affiliation: Tennessee Technological University
-  - given-names: Davide
-    family-names: Pesavento
-    email: davide.pesavento@nist.gov
-    affiliation: NIST
-  - given-names: Junxiao
-    family-names: Shi
-    email: junxiao.shi@nist.gov
-    affiliation: NIST
-  - given-names: Susmit
-    family-names: Shannigrahi
-    email: sshannigrahi@tntech.edu
-    affiliation: Tennessee Technological University
-  - given-names: Lotfi
-    family-names: Benmohamed
-    email: lotfi.benmohamed@nist.gov
-    affiliation: NIST
-repository-code: 'https://github.com/tntech-ngin/2023-tntech-nist-ndn-traffic-repo'
-license: 0BSD
+@inproceedings{10.1145/3623565.3623707,
+author = {Timilsina, Sankalpa and Pesavento, Davide and Shi, Junxiao and Shannigrahi, Susmit and Benmohamed, Lotfi},
+title = {Capture and Analysis of Traffic Traces on a Wide-Area NDN Testbed},
+year = {2023},
+isbn = {9798400704031},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3623565.3623707},
+doi = {10.1145/3623565.3623707},
+abstract = {High-quality network traffic measurements from realistic network deployments are crucial to analyze and better understand emerging network technologies for the purpose of maturing them. However, achieving this measurement goal for the Named Data Networking (NDN) protocol remains a challenge mainly due to the lack of real-world deployments. To address this gap, we have created a dataset of NDN traffic traces and a software toolkit for capturing, analyzing, and replaying these traces. Our dataset, obtained directly from the real routers of the official NDN testbed, is the first non-synthetic dataset of this scale openly available to the research community. This paper presents the dataset and the tools, discusses its properties, and shares insights applicable to other NDN research.},
+booktitle = {Proceedings of the 10th ACM Conference on Information-Centric Networking},
+pages = {101–108},
+numpages = {8},
+keywords = {testbed, wide area network, file transfer, realistic traffic, named data networking, video streaming, packet trace, traffic analysis},
+location = {Reykjavik, Iceland},
+series = {ACM ICN '23}
+}
