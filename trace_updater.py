@@ -26,10 +26,14 @@ def organize_files():
 
 def push_changes():
     print("Pushing changes...")
-    run_command("git add /raid/tracedata")
-    date = run_command("date")
-    run_command(f"git commit -m 'Auto-commit traces [{date}]'")
-    run_command("git push")
+    status_output = run_command("git status --porcelain")
+    if status_output.strip():
+        run_command("git add /raid/tracedata")
+        date = run_command("date").strip()
+        run_command(f"git commit -m 'Auto-commit traces [{date}]'")
+        run_command("git push")
+    else:
+        print("No changes to commit.")
 
 
 def main():
