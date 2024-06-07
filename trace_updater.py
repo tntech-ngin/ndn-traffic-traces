@@ -31,6 +31,7 @@ def push_changes():
         run_command("git add /raid/tracedata")
         date = run_command("date").strip()
         run_command(f"git commit -m 'Auto-commit traces [{date}]'")
+#        run_command(f"dig github.com") #workaround for temporary name resolution failure
         run_command("git push")
     else:
         print("No changes to commit.")
