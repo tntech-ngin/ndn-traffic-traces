@@ -31,11 +31,22 @@ def push_changes():
         run_command("git add /raid/tracedata")
         date = run_command("date").strip()
         run_command(f"git commit -m 'Auto-commit traces [{date}]'")
-#        run_command(f"dig github.com") #workaround for temporary name resolution failure
-        run_command("git push")
+
+        max_attempts = 10
+        attempt = 0
+        while attempt < max_attempts:
+            try:
+                print(f"Attempt {attempt + 1} to push changes...")
+                run_command("git push")
+                print("Push successful")
+                return
+            except subprocess.CalledProcessError as e:
+                print(f"Push failed (attempt {attempt + 1}): {e}")
+                attempt += 1
+
+        print("Failed to push changes after 10 attempts.")
     else:
         print("No changes to commit.")
-
 
 def main():
     organize_files()
