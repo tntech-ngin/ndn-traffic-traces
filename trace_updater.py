@@ -38,15 +38,15 @@ def push_changes():
             try:
                 print(f"Attempt {attempt + 1} to push changes...")
                 run_command("git push")
-                print("Push successful")
+                print("Push successful...")
                 return
             except subprocess.CalledProcessError as e:
                 print(f"Push failed (attempt {attempt + 1}): {e}")
                 attempt += 1
 
-        print("Failed to push changes after 10 attempts.")
+        print(f"Failed to push changes after {max_attempts} attempts...")
     else:
-        print("No changes to commit.")
+        print("No changes to commit...")
 
 def main():
     organize_files()
